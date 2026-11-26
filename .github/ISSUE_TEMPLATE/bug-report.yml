@@ -1,0 +1,41 @@
+name: Something else isn't working
+description: Hidr broke something on X, the popup misbehaves, or a setting doesn't stick.
+title: "Bug: "
+labels: ["bug"]
+body:
+  - type: dropdown
+    id: browser
+    attributes:
+      label: Browser and device
+      options:
+        - Safari on Mac
+        - Safari on iPhone
+        - Safari on iPad
+        - Chrome
+        - Other (say below)
+    validations:
+      required: true
+  - type: dropdown
+    id: mode
+    attributes:
+      label: Which option was selected?
+      options:
+        - Send me back to the post
+        - Block scrolling
+        - Hidr was switched off
+  - type: input
+    id: versions
+    attributes:
+      label: Hidr version and browser version
+      placeholder: "Hidr 1.0, Chrome 142"
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened, and what did you expect?
+      description: If a normal part of X stopped working (timeline videos, replies, closing a video), say which.
+    validations:
+      required: true
+  - type: textarea
+    id: extra
+    attributes:
+      label: Screenshots or anything else (optional)

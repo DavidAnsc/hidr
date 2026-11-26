@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Privacy questions
+    url: https://github.com/DavidAnsc/hidr/blob/main/PRIVACY.md
+    about: What Hidr stores and what it sends (on Chrome, only a random ID for plan checks).
