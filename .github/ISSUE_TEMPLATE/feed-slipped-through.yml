@@ -1,0 +1,76 @@
+name: The video feed slipped through
+description: X opened the swipe-up video feed even though Hidr was on.
+title: "Feed slipped through: "
+labels: ["feed-slipped-through"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting this. X tests different designs on different accounts, so the details below help reproduce it.
+        **Tip:** if you were using **Block scrolling**, try **Send me back to the post**. It only looks at the page address, so it keeps working when X changes the page.
+  - type: dropdown
+    id: mode
+    attributes:
+      label: Which option was selected?
+      options:
+        - Send me back to the post
+        - Block scrolling
+    validations:
+      required: true
+  - type: dropdown
+    id: browser
+    attributes:
+      label: Browser and device
+      options:
+        - Safari on Mac
+        - Safari on iPhone
+        - Safari on iPad
+        - Chrome
+        - Other (say below)
+    validations:
+      required: true
+  - type: input
+    id: versions
+    attributes:
+      label: Hidr version and browser version
+      placeholder: "Hidr 1.0, Safari 19.1"
+  - type: dropdown
+    id: x-app
+    attributes:
+      label: Which X web app were you on?
+      description: X is moving to a new web app. If you're not sure, pick "Not sure".
+      options:
+        - Not sure
+        - The usual x.com
+        - The new X web app
+        - mobile.x.com / mobile.twitter.com
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Quick checks
+      options:
+        - label: The switch at the top of the Hidr popup was on.
+        - label: Hidr is allowed on x.com in the browser's extension settings.
+        - label: I reloaded the X tab after changing settings, and it still happened.
+  - type: textarea
+    id: steps
+    attributes:
+      label: What did you do, and what happened?
+      description: For example, "Tapped a video in my timeline, the full-screen feed opened, and I could swipe to the next video."
+      placeholder: |
+        1. Tapped a video in ...
+        2. ...
+        3. The feed opened and ...
+    validations:
+      required: true
+  - type: input
+    id: url
+    attributes:
+      label: Address of the feed page (optional)
+      description: Copy it from the address bar while the feed is open. Remove anything you don't want to share.
+      placeholder: "https://x.com/..."
+  - type: textarea
+    id: extra
+    attributes:
+      label: Anything else? (optional)
+      description: Screenshots or a screen recording help a lot. Hide anything personal first.
